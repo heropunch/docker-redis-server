@@ -2,6 +2,7 @@ Redis on Alpine Linux
 ======================
 
 Docker container to run redis:
+
 - small: 6.2MBs
 - simple: no entrypoint, no scripts that require a root user to run `chown` or `chmod`.
 - the non-root user `stoic - uid 25001` is defined.
@@ -28,6 +29,6 @@ The official redis image: https://registry.hub.docker.com/_/redis/
 - much bigger
 - requires the root user to run the container.
 
-Also based on ALpine Linux: https://registry.hub.docker.com/u/webhippie/redis/
+Also based on Alpine Linux: https://registry.hub.docker.com/u/webhippie/redis/
 - very configurable
 - requires the root user to run the container.
