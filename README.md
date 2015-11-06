@@ -1,34 +1,20 @@
-Redis on Alpine Linux
+heropunch/redis-server
 ======================
 
 Docker container to run redis:
 
-- small: 6.2MBs
-- simple: no entrypoint, no scripts that require a root user to run `chown` or `chmod`.
-- the non-root user `stoic - uid 25001` is defined.
+- Small: 6.2MB
+- Simple: acts just like the binary
+- Does not run as root
 
 
-Usage
-=====
+### Usage
+
+```sh
+$ docker pull heropunch/redis-server
+$ docker run -d --name "redis" \
+                --restart=on-failure:5 \
+                --net=host \
+                -v $SHARED/data/redis/:/data \
+                heropunch/redis-server --dir /data --appendonly yes
 ```
-docker pull sutoiku/redis
-docker run \
-  --name "redis" \
-  -d \
-  --restart=on-failure:5 \
-  --net=host \
-  -v $SHARED/data/redis/:/data \
-  -u stoic \
-  sutoiku/redis:latest redis-server --dir /data --appendonly yes
-```
-
-Other notable redis containers
-==============================
-The official redis image: https://registry.hub.docker.com/_/redis/
-
-- much bigger
-- requires the root user to run the container.
-
-Also based on Alpine Linux: https://registry.hub.docker.com/u/webhippie/redis/
-- very configurable
-- requires the root user to run the container.
