@@ -3,7 +3,7 @@ heropunch/redis-server
 
 A small and simple Redis server.
 
-- Small: `<5MB`
+- Small: `3MB`
 - Simple: acts just like the binary
 - Does not run as root
 
