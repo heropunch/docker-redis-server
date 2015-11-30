@@ -1,5 +1,6 @@
-heropunch/redis-server
-======================
+[![Docker Repository on Quay](https://quay.io/repository/heropunch/redis-server/status)](https://quay.io/repository/heropunch/redis-server)
+
+### heropunch/redis-server
 
 A small and simple Redis server.
 
