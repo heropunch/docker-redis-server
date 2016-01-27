@@ -1,6 +1,6 @@
-[![Docker Repository on Quay](https://quay.io/repository/heropunch/redis-server/status)](https://quay.io/repository/heropunch/redis-server)
+[![Docker Repository on Quay](https://quay.io/repository/infiniteautomata/redis-server/status)](https://quay.io/repository/infiniteautomata/redis-server)
 
-### heropunch/redis-server
+### infiniteautomata/redis-server
 
 A small and simple Redis server.
 
@@ -12,11 +12,11 @@ A small and simple Redis server.
 ### Usage
 
 ```sh
-$ docker pull heropunch/redis-server
+$ docker pull quay.io/infiniteautomata/redis-server
 $ docker run -d
              --name redis \
              --restart=on-failure:5 \
              --net=host \
              -v $SHARED/data/redis/:/var/lib/redis \
-             heropunch/redis-server --appendonly yes
+             quay.io/infiniteautomata/redis-server --appendonly yes
 ```
