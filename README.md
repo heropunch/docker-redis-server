@@ -1,6 +1,4 @@
-[![Docker Repository on Quay](https://quay.io/repository/infiniteautomata/redis-server/status)](https://quay.io/repository/infiniteautomata/redis-server)
-
-### infiniteautomata/redis-server
+### redis-server
 
 A small and simple Redis server.
 
@@ -12,7 +10,7 @@ A small and simple Redis server.
 ### Usage
 
 ```sh
-$ docker pull quay.io/infiniteautomata/redis-server
+$ docker build -t redis-server .
 $ docker run -d
              --name redis \
              --restart=on-failure:5 \
