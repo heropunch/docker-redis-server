@@ -16,5 +16,5 @@ $ docker run -d
              --restart=on-failure:5 \
              --net=host \
              -v $SHARED/data/redis/:/var/lib/redis \
-             quay.io/infiniteautomata/redis-server --appendonly yes
+             redis-server --appendonly yes
 ```
